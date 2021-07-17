@@ -1,0 +1,18 @@
+import { newSpecPage } from '@stencil/core/testing';
+import { {{properCase name}} } from '../{{dashCase name}}';
+
+describe('{{dashCase name}}', () => {
+  it('renders', async () => {
+    const page = await newSpecPage({
+      components: [{{properCase name}}],
+      html: `<{{dashCase name}}></{{dashCase name}}>`,
+    });
+    expect(page.root).toEqualHtml(`
+      <component>
+        <mock:shadow-root>
+          <slot></slot>
+        </mock:shadow-root>
+      </component>
+    `);
+  });
+});
