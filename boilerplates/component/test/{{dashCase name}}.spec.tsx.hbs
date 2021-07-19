@@ -8,11 +8,11 @@ describe('{{dashCase name}}', () => {
       html: `<{{dashCase name}}></{{dashCase name}}>`,
     });
     expect(page.root).toEqualHtml(`
-      <component>
+      <{{dashCase name}}>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </component>
+      </{{dashCase name}}>
     `);
   });
 });
